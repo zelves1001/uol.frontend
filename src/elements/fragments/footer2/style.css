@@ -1,0 +1,38 @@
+#footer-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    width: 100%;
+    height: 100%; 
+}
+
+#block{
+    display: block;
+    text-align: left;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.with-margin{
+    margin-bottom: 3rem;
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.margin{
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+a:hover{
+    opacity: 0.5;
+}

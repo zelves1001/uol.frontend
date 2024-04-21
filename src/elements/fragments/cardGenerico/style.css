@@ -1,0 +1,18 @@
+#card-generico{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-generico img{
+    height: 20rem;
+    width: 15rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+#card-generico:hover{
+    transform: scale(1.02);
+    opacity: 0.5;
+}

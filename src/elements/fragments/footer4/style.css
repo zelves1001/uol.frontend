@@ -1,0 +1,38 @@
+#newsletter-container{
+    display: block;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .subscribe-form form {
+    display: flex;
+  }
+  
+  .subscribe-form input {
+    border: none;
+    border-bottom: 2px solid black; 
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .subscribe-form button {
+    padding: 6px 10px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-skip-ink: auto; 
+    text-underline-offset: 0.5em;
+    text-decoration-thickness: 0.12em;
+  }
+  
+  .subscribe-form button:hover {
+    transform: scale(1.05);
+  }
