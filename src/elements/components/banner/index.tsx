@@ -10,7 +10,7 @@ export default function Banner() {
                 <div id="banner-text">
                     <h1>Shop</h1>
                     <div id="banner-buttons">
-                        <a href="">Home</a>
+                        <a href="/">Home</a>
                         <img src={Arrow} alt="" />
                         <span>Shop</span>
                     </div>
