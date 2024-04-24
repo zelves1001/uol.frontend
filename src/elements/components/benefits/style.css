@@ -1,0 +1,38 @@
+#benefits-container{
+    display: flex;
+    width: 100vw;
+    height: 17rem;
+    background-color: #FAF3EA;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#benefits-container span{
+    opacity: 0.5;
+}
+
+.benefit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefit img{
+    margin-right: 1rem;
+}
+
+.text-benefit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.text-benefits span{
+    opacity: 0.5;
+}
+
+.text-benefit h2 {
+    margin-bottom: 0.8rem;
+}
