@@ -1,0 +1,9 @@
+#filter{
+    display: flex;
+    height: 8rem;
+    width: 100vw;
+    background-color: #F9F1E7;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+}
