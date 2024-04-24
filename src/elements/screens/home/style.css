@@ -1,0 +1,11 @@
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#home-banner{
+    width: 100vw;
+}
