@@ -1,0 +1,45 @@
+#shop-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+#shop-menu button{
+    margin-right: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#shop-menu button:hover{
+    background-color: #B88E2F;
+    color: #fff;
+}
+
+#menu-numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-numbers button{
+    border: none;
+    background-color: #F9F1E7;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+#menu-next{
+    border: none;
+    background-color: #F9F1E7;
+    width: 5rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.selected{
+    background-color: #B88E2F !important;
+    color: #fff;
+}

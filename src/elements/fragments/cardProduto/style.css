@@ -1,0 +1,34 @@
+#cardproduto-container {
+    display: grid;
+    grid-template-rows: 2fr 1fr; 
+    grid-template-columns: 1fr; 
+    height: 100%;
+    width: 100%;
+}
+
+#cardproduto-container img{
+    width: 100%;
+    height: 100%;
+}
+
+#descricao{
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F5F7;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#descricao h2, p{
+    margin-bottom: -0.6rem;
+    margin-left: 0.5rem;
+}
+
+#descricao h3{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#descricao p{
+    opacity: 0.5;
+}

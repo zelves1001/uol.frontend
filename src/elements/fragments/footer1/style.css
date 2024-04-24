@@ -1,0 +1,22 @@
+#container-logo1{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#top{
+    margin-bottom: 2rem;
+}
+
+#top h1{
+    font-size: 25px;
+}
+
+#middle span{
+    display: block;
+    opacity: 0.5;
+    text-align:left;
+}

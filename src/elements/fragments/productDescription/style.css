@@ -1,0 +1,12 @@
+#product-big-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#product-big-description p{
+    opacity: 0.5;
+    text-align: justify;
+}

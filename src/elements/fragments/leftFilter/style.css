@@ -1,0 +1,44 @@
+#left-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+}
+
+#left-filter button{
+    border: none;
+    background-color: transparent;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+#left-filter button img{
+    width: 1.5rem;
+}
+
+#filter-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#filter-button span{
+    margin-right: 1.5rem;
+}
+
+#filter-button button{
+    margin-right: 0.5rem;
+}
+
+#vertical-line {
+    border-left: 2.5px solid #000; 
+    height: 40px; 
+    opacity: 0.3;
+    margin-right: 3rem;
+}
+
+#showing-results{
+    font-size: 1.3rem;
+}

@@ -1,0 +1,23 @@
+#block{
+    display: block;
+    text-align: left;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.margin{
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+a:hover{
+    opacity: 0.5;
+}

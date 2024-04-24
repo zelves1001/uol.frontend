@@ -1,0 +1,21 @@
+#logo-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#logo-container span{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    margin-left: 0.3rem;
+}
+
+#logo-container img{
+    margin-left: 4rem;
+}
