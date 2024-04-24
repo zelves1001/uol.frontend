@@ -1,0 +1,24 @@
+#description{
+    display: flex;
+    height: 10rem;
+    width: 50vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+#description-titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#description-titles h2{
+    font-weight: 500;
+}
+
+#additional-information{
+    opacity: 0.3;
+    margin-left: 3rem;
+}
