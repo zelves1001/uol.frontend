@@ -6,9 +6,9 @@ export default function PageGuider(_props: any) {
         <div>
             <div id="page-guider">
                 <div id="guider-links">
-                    <a id="afastar" href="">Home</a>
+                    <a id="afastar" href="/">Home</a>
                     <img src={Arrow} alt="" />
-                    <a href="">Shop</a>
+                    <a href="/shop">Shop</a>
                     <img src={Arrow} alt="" />
                 </div>
                 <div id="guider-product">
