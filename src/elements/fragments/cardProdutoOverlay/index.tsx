@@ -4,9 +4,14 @@ import Share from './assets/share.svg';
 import Like from './assets/like.svg';
 
 export default function CardProdutoOverlay(_props: any) {
+
+    const handleClick = () => {
+        window.location.href = '/productDetail';
+    };
+
     return(
         <div>
-            <div id="product-overlay">
+            <div onClick={handleClick} id="product-overlay">
                 <div>
                     <button id="see-details">See Details</button>
                 </div>
