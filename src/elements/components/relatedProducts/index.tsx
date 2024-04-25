@@ -1,7 +1,5 @@
 import "./style.css";
 import CardProduto from "../../fragments/cardProduto";
-import CardProdutoDesconto from "../../fragments/cardProdutoDesconto";
-import CardProdutoNovo from "../../fragments/cardProdutoNovo";
 import Product1 from './assets/product1.png';
 
 export default function RelatedProducts(_props: any) {
@@ -19,7 +17,7 @@ export default function RelatedProducts(_props: any) {
                         />
                     </div>
                     <div className="card-produto">
-                        <CardProdutoDesconto
+                        <CardProduto
                         img={Product1}
                         name="Syltherine"
                         description="Stylish cafe chair"
@@ -29,7 +27,7 @@ export default function RelatedProducts(_props: any) {
                         />
                     </div>
                     <div className="card-produto">
-                        <CardProdutoNovo
+                        <CardProduto
                         img={Product1}
                         name="Syltherine"
                         description="Stylish cafe chair"
