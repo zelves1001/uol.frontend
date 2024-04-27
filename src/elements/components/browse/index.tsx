@@ -15,18 +15,21 @@ export default function Browse() {
                         <CardGenerico
                         title="Dining"
                         img={Foto1}
+                        category="1"
                         />
                     </div>
                     <div className="card-generico">
                         <CardGenerico 
                         title="Living"
                         img={Foto2}
+                        category="2"
                         />
                     </div>
                     <div>
                         <CardGenerico 
                         title="Bedroom"
                         img={Foto3}
+                        category="3"
                         />
                     </div>   
                 </div>  

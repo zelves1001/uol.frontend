@@ -1,16 +1,37 @@
-import "./style.css";
+import React, { useState } from 'react';
+import './style.css';
 import Filter from './assets/filter.svg';
 import Dots from './assets/dots.svg';
 import Icon from './assets/icon.svg';
 
 export default function LeftFilter() {
-    return(
+    const [showFilters, setShowFilters] = useState(false);
+
+    const toggleFilters = () => {
+        setShowFilters(!showFilters);
+    };
+
+    return (
         <div>
             <div id="left-filter">
                 <div id="filter-button">
-                    <button><img src={Filter} alt="" /></button>
+                    <button onClick={toggleFilters}><img src={Filter} alt="" /></button>
                     <span>Filter</span>
                 </div>
+                {showFilters && (
+                    <div id="filter-list">
+                        <label>
+                            <input type="checkbox" /> Filter 1
+                        </label>
+                        <label>
+                            <input type="checkbox" /> Filter 2
+                        </label>
+                        <label>
+                            <input type="checkbox" /> Filter 3
+                        </label>
+                        {/* Add more filters here */}
+                    </div>
+                )}
                 <button><img src={Dots} alt="" /></button>
                 <button><img src={Icon} alt="" /></button>
                 <div id="vertical-line"></div>

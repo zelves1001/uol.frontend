@@ -36,7 +36,7 @@ export default function ProductCart(_props: any) {
                 <div id="product-cart">
                     <div id="product-options">
                         <h1>{_props.name}</h1>
-                        <h2>{_props.value}</h2>
+                        <h2>Rs. {_props.value}</h2>
                         <div id="star-container">
                             <div id="star">
                                 {items.map((index) => (

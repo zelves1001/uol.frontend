@@ -13,6 +13,10 @@ interface Product {
 
 export default function Products(_props: any) {
 
+    const handleClick = () => {
+        window.location.href = '/shop/:0';
+    };
+
     const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
@@ -38,6 +42,7 @@ export default function Products(_props: any) {
                     {products.map((product) => (
                         <div key={product.id} className="card-produto">
                             <CardProduto
+                                id={product.id}
                                 img={product.image_link}
                                 name={product.name}
                                 description={product.description}
@@ -48,7 +53,7 @@ export default function Products(_props: any) {
                         </div>
                     ))}
                 </div>
-                <button id="show-more">Show More</button>
+                <button onClick={handleClick} id="show-more">Show More</button>
             </div>
         </div>
     );
