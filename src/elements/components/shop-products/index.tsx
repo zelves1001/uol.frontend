@@ -10,14 +10,15 @@ interface Product {
     description: string;
     price: number;
     image_link: string;
+    has_discount: boolean;
+    is_new: boolean;
+    discount_percent: number;
 }
 
 export default function ShopProducts(_props: any) {
     const { id } = useParams();
     const novaId = id ? id.replace(/:/g, '') : '';
     const [info, setInfo] = useState(1);
-
-    console.log(novaId)
 
     const childToParent = (childdata: any) => {
         setInfo(childdata);
@@ -28,11 +29,29 @@ export default function ShopProducts(_props: any) {
     useEffect(() => {
         var pageUrl = "";
         const url = () =>{
-            if(novaId == "0" || undefined){
+            if((novaId == "0" || undefined) && (_props.filter == 0)){
                 pageUrl = `http://localhost:3888/products?page=${info}&pageSize=16&sort=${_props.short}`;
             }
-            else if(novaId == "1" || novaId == "2" || novaId == "3"){
+            else if((novaId == "0" || undefined) && (_props.filter == 1)){
+                pageUrl = `http://localhost:3888/products/hasDiscount/true?page=${info}&pageSize=16&sort=${_props.short}`;
+            }
+            else if((novaId == "0" || undefined) && (_props.filter == 2)){
+                pageUrl = `http://localhost:3888/products/isNew/true?page=${info}&pageSize=16&sort=${_props.short}`;
+            }
+            else if((novaId == "0" || undefined) && (_props.filter == 3)){
+                pageUrl = `http://localhost:3888/products/isNewOrHasDiscount/true/true?page=${info}&pageSize=16&sort=${_props.short}`;
+            }
+            else if((novaId == "1" || novaId == "2" || novaId == "3") && (_props.filter == 0)){
                 pageUrl = `http://localhost:3888/products/category/${novaId}?page=${info}&pageSize=16&sort=${_props.short}`;
+            }
+            else if((novaId == "1" || novaId == "2" || novaId == "3") && (_props.filter == 1)){
+                pageUrl = `http://localhost:3888/products/category/${novaId}/hasDiscount/true?page=${info}&pageSize=16&sort=${_props.short}`;
+            }
+            else if((novaId == "1" || novaId == "2" || novaId == "3") && (_props.filter == 2)){
+                pageUrl = `http://localhost:3888/products/category/${novaId}/isNew/true?page=${info}&pageSize=16&sort=${_props.short}`;
+            }
+            else if((novaId == "1" || novaId == "2" || novaId == "3") && (_props.filter == 3)){
+                pageUrl = `http://localhost:3888/products/categoryOr/${novaId}/isNew/true/hasDiscount/true?page=${info}&pageSize=16&sort=${_props.short}`;
             }
         };
         const fetchProducts = async () => {
@@ -48,7 +67,7 @@ export default function ShopProducts(_props: any) {
 
         url();
         fetchProducts();
-    }, [info, novaId, _props.short]);
+    }, [info, novaId, _props.short, _props.filter]);
 
     return (
         <div>
@@ -62,8 +81,9 @@ export default function ShopProducts(_props: any) {
                                 name={product.name}
                                 description={product.description}
                                 value={product.price}
-                                hasDescount={false}
-                                isNew={false}
+                                hasDiscount={product.has_discount}
+                                isNew={product.is_new}
+                                discountPercentage={product.discount_percent}
                             />
                         </div>
                     ))}

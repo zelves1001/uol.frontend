@@ -10,9 +10,14 @@ import { useState } from "react";
 export default function Shop() {
 
     const [shortBy, setShortBy] = useState('none');
+    const [filter, setFilter] = useState(0);
   
     const shortByReceiverShop = (shortByData: any) => {
         setShortBy(shortByData);
+    }
+
+    const filterFunctionShop = (filterData: any) => {
+        setFilter(filterData);
     }
 
     return(
@@ -20,9 +25,10 @@ export default function Shop() {
             <div id="shop">
                 <Header/>
                 <Banner/>
-                <Filter shortByReceiverShop={shortByReceiverShop}/>
+                <Filter shortByReceiverShop={shortByReceiverShop} filterFunctionShop={filterFunctionShop}/>
                 <ShopProducts
                     short={shortBy}
+                    filter={filter}
                 />
                 <Benefits/>
                 <Footer/>

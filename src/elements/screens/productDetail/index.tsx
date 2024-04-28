@@ -17,6 +17,7 @@ interface Product {
     image_link: string;
     categoryId: number;
     large_description:string
+    other_images_link: string
 }
 
 
@@ -56,6 +57,7 @@ export default function ProductDetail() {
                     description={product.description}
                     sku={product.sku}
                     category={product.categoryId}
+                    other_images={product.other_images_link}
                 />
                 <div className="line"></div>
                 <Description

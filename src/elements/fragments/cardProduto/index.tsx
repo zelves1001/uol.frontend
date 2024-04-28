@@ -14,7 +14,7 @@ export default function CardProduto(_props: any) {
             <div id="cardproduto-container">
                 <div id="img-produto">
                     <img src={_props.img} alt={_props.name} />
-                    <div className={`${!_props.hasDescount ? "hidden" : ""}`} id="bolinha2">-{_props.descount}%</div>
+                    <div className={`${!_props.hasDiscount ? "hidden" : ""}`} id="bolinha2">-{_props.discountPercentage}%</div>
                     <div className={`${!_props.isNew ? "hidden" : ""}`} id="bolinha">New</div>
                 </div>
                 <div id="descricao">

@@ -1,15 +1,42 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import Filter from './assets/filter.svg';
 import Dots from './assets/dots.svg';
 import Icon from './assets/icon.svg';
 
-export default function LeftFilter() {
+interface LeftFilterProps {
+    filterFunction: (arg: any) => void;
+}
+
+const LeftFilter: React.FC<LeftFilterProps> = ({filterFunction}) => {
     const [showFilters, setShowFilters] = useState(false);
+    const [filterSeted, setFilterSeted] = useState(0); // Estado para armazenar o número de filtros definidos
 
     const toggleFilters = () => {
         setShowFilters(!showFilters);
     };
+
+    const handleDiscountsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const isCheckedDiscount = event.target.checked;
+        if (isCheckedDiscount) {
+            setFilterSeted(prev => prev + 1);
+        } else {
+            setFilterSeted(prev => prev - 1);
+        }
+    };
+
+    const handleNewChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const isCheckedNew = event.target.checked;
+        if (isCheckedNew) {
+            setFilterSeted(prev => prev + 2);
+        } else {
+            setFilterSeted(prev => prev - 2);
+        }
+    };
+
+    useEffect(() => {
+        filterFunction(filterSeted);
+    }, [filterSeted, filterFunction]);
 
     return (
         <div>
@@ -21,15 +48,11 @@ export default function LeftFilter() {
                 {showFilters && (
                     <div id="filter-list">
                         <label>
-                            <input type="checkbox" /> Filter 1
+                            <input type="checkbox" onChange={handleNewChange} /> Novos
                         </label>
                         <label>
-                            <input type="checkbox" /> Filter 2
+                            <input type="checkbox" onChange={handleDiscountsChange} /> Descontos
                         </label>
-                        <label>
-                            <input type="checkbox" /> Filter 3
-                        </label>
-                        {/* Add more filters here */}
                     </div>
                 )}
                 <button><img src={Dots} alt="" /></button>
@@ -40,3 +63,5 @@ export default function LeftFilter() {
         </div>
     );
 }
+
+export default LeftFilter;

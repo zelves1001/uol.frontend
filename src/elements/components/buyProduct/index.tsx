@@ -8,6 +8,10 @@ export default function BuyProduct(_props: any) {
             <div id="buy-product">
                 <ProductView
                     foto1={_props.img}
+                    foto2={_props.other_images[0]}
+                    foto3={_props.other_images[1]}
+                    foto4={_props.other_images[2]}
+                    foto5={_props.other_images[3]}
                 />
                 <ProductCart
                     name={_props.name}
