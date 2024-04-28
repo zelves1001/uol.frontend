@@ -13,6 +13,7 @@ interface Product {
     has_discount: boolean;
     is_new: boolean;
     discount_percent: number;
+    other_images_link: string;
 }
 
 export default function ShopProducts(_props: any) {

@@ -23,8 +23,6 @@ export default function RelatedProducts(_props: any) {
 		}
     };
 
-	console.log(_props.category)
-
 	useEffect(() => {
 		const fetchProducts = async () => {
 			try {

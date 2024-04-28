@@ -6,8 +6,6 @@ export default function ProductView(_props: any) {
     const [selectedImg, setSelectedImg] = useState(_props.foto1)
     const [selectedOption, setSelectedOption] = useState(1)
 
-    console.log(_props.foto3)
-
     useEffect(() => {
         switch (selectedOption) {
             case 1:
