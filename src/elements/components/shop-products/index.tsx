@@ -14,6 +14,7 @@ interface Product {
     is_new: boolean;
     discount_percent: number;
     other_images_link: string;
+    discount_price: number;
 }
 
 export default function ShopProducts(_props: any) {
@@ -84,7 +85,8 @@ export default function ShopProducts(_props: any) {
                                 value={product.price}
                                 hasDiscount={product.has_discount}
                                 isNew={product.is_new}
-                                discountPercentage={product.discount_percent}
+                                discountPercent={product.discount_percent}
+                                discountPrice={product.discount_price}
                             />
                         </div>
                     ))}

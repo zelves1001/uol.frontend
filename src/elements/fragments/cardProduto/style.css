@@ -37,11 +37,11 @@
     position: relative;
 }
 
-#container-value{
+.container-value{
     display: flex;
 }
 
-#container-value h4{
+.container-value h4{
     opacity: 0.5;
     font-weight: 400;
     text-decoration: line-through;

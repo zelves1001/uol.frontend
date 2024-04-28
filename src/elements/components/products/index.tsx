@@ -9,6 +9,11 @@ interface Product {
     description: string;
     price: number;
     image_link: string;
+    has_discount: boolean;
+    is_new: boolean;
+    discount_percent: number;
+    other_images_link: string;
+    discount_price: number;
 }
 
 export default function Products(_props: any) {
@@ -22,7 +27,7 @@ export default function Products(_props: any) {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch(`http://localhost:3888/products?page=1&pageSize=8&sort=none`);
+                const response = await fetch(`http://localhost:3888/products/hasDiscount/true?page=1&pageSize=16&sort=none`);
                 const data = await response.json();
                 setProducts(data.slice(0, 300000));
                 console.log(data);
@@ -47,8 +52,10 @@ export default function Products(_props: any) {
                                 name={product.name}
                                 description={product.description}
                                 value={product.price}
-                                hasDescount={false}
-                                isNew={false}
+                                hasDiscount={product.has_discount}
+                                isNew={product.is_new}
+                                discountPercent={product.discount_percent}
+                                discountPrice={product.discount_price}
                             />
                         </div>
                     ))}

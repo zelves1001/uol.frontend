@@ -9,20 +9,25 @@ export default function CardProduto(_props: any) {
         window.location.href = `/productDetail/:${_props.id}`;
     };
 
+    console.log(_props.has_discount)
+
     return(
         <div>
             <div id="cardproduto-container">
                 <div id="img-produto">
                     <img src={_props.img} alt={_props.name} />
-                    <div className={`${!_props.hasDiscount ? "hidden" : ""}`} id="bolinha2">-{_props.discountPercentage}%</div>
+                    <div className={`${!_props.hasDiscount ? "hidden" : ""}`} id="bolinha2">-{_props.discountPercent}%</div>
                     <div className={`${!_props.isNew ? "hidden" : ""}`} id="bolinha">New</div>
                 </div>
                 <div id="descricao">
                     <h2>{_props.name}</h2>
                     <p>{_props.description}</p>
-                    <div id="container-value">
+                    <div className={`container-value ${(_props.discountPrice == 0) ? "hidden" : ""}`}>
+                        <h3>Rp {_props.discountPrice}</h3>
+                        <h4 className={`${!_props.discountPercent ? "hidden" : ""}`}>Rp {_props.value}</h4>
+                    </div>
+                    <div className={`container-value ${(_props.discountPrice != 0) ? "hidden" : ""}`}>
                         <h3>Rp {_props.value}</h3>
-                        <h4 className={`${!_props.full ? "hidden" : ""}`}>Rp {_props.full}</h4>
                     </div>
                 </div>
                 <div>
