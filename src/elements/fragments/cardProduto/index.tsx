@@ -23,8 +23,8 @@ export default function CardProduto(_props: any) {
                     <h2>{_props.name}</h2>
                     <p>{_props.description}</p>
                     <div className={`container-value ${(_props.discountPrice == 0) ? "hidden" : ""}`}>
-                        <h3>Rp {_props.discountPrice}</h3>
-                        <h4 className={`${!_props.discountPercent ? "hidden" : ""}`}>Rp {_props.value}</h4>
+                        <h3>Rp {_props.value}</h3>
+                        <h4 className={`${!_props.discountPercent ? "hidden" : ""}`}>Rp {_props.discountPrice}</h4>
                     </div>
                     <div className={`container-value ${(_props.discountPrice != 0) ? "hidden" : ""}`}>
                         <h3>Rp {_props.value}</h3>

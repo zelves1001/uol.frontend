@@ -27,7 +27,7 @@ export default function Products(_props: any) {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch(`http://localhost:3888/products/hasDiscount/true?page=1&pageSize=16&sort=none`);
+                const response = await fetch(`http://localhost:3888/products/hasDiscount/true?page=1&pageSize=8&sort=none`);
                 const data = await response.json();
                 setProducts(data.slice(0, 300000));
                 console.log(data);
