@@ -9,8 +9,6 @@ export default function CardProduto(_props: any) {
         window.location.href = `/productDetail/:${_props.id}`;
     };
 
-    console.log(_props.has_discount)
-
     return(
         <div>
             <div id="cardproduto-container">

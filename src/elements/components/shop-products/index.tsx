@@ -21,6 +21,7 @@ export default function ShopProducts(_props: any) {
     const { id } = useParams();
     const novaId = id ? id.replace(/:/g, '') : '';
     const [info, setInfo] = useState(1);
+    const [gridRows, setGridRows] = useState(4)
 
     const childToParent = (childdata: any) => {
         setInfo(childdata);
@@ -61,7 +62,7 @@ export default function ShopProducts(_props: any) {
                 const response = await fetch(pageUrl);
                 const data = await response.json();
                 setProducts(data.slice(0, 300000));
-                console.log(data);
+                setGridRows(Math.ceil(data.length/4))
             } catch (error) {
                 console.error('Error fetching products:', error);
             }
@@ -71,10 +72,12 @@ export default function ShopProducts(_props: any) {
         fetchProducts();
     }, [info, novaId, _props.short, _props.filter]);
 
+    
+
     return (
         <div>
             <div id="products-title">
-                <div id="shopproducts-container">
+                <div id="shopproducts-container" style={{ gridTemplateRows: `repeat(${gridRows}, 1fr)` }}>
                     {products.map((product) => (
                         <div key={product.id} className="card-produto">
                             <CardProduto
